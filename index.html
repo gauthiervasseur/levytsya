@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Levytsya Video Arcade</title>
+<meta name="description" content="Levytsya (левиця) turns a shaky, noisy conference recording into a clean video: stabilize, trim, clean the audio, add your watermark and subtitles in 28 languages. Free, and it runs on your own computer.">
+<meta property="og:title" content="Levytsya · video arcade">
+<meta property="og:description" content="Stabilize, trim, clean the audio, watermark and subtitle your talk recordings. Free, private, runs on your computer.">
+<meta property="og:image" content="assets/screens/app-main.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<nav class="topbar">
+  <a class="brand" href="#top"><canvas id="nav-sprite" aria-hidden="true"></canvas><span>LEVYTSYA</span></a>
+  <div class="nav-links">
+    <a href="#levels">LEVELS</a>
+    <a href="#how">HOW TO PLAY</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn tiny go" href="#download">DOWNLOAD</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <canvas class="hero-sprite" id="hero-sprite" aria-hidden="true"></canvas>
+    <h1 class="logo">ЛЕВИЦЯ</h1>
+    <p class="tag">LEVYTSYA · VIDEO ARCADE</p>
+    <p class="lead">Turn a shaky, noisy recording of your talk into a video you're proud to share. Five levels, one button, and a lioness who crosses the road for you.</p>
+    <div class="cta">
+      <a class="btn start" href="#download">▶ DOWNLOAD FREE</a>
+      <a class="btn" href="#how">HOW TO PLAY</a>
+    </div>
+    <p class="small">Mac (Apple Silicon &amp; Intel) · Windows · Linux &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; your videos never leave your computer</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" aria-labelledby="demo-title">
+    <div class="box attract">
+      <span class="box-title" id="demo-title">ATTRACT MODE</span>
+      <canvas id="attract" aria-label="Animation: the lioness crosses four lanes, one per level"></canvas>
+      <p class="caption blink">ONE LANE PER LEVEL · INSERT VIDEO TO PLAY</p>
+    </div>
+  </section>
+
+  <section class="section" id="levels" aria-labelledby="levels-title">
+    <h2 class="section-title" id="levels-title">SELECT YOUR LEVELS</h2>
+    <p class="section-lead">Turn on the ones you need. They always run in the right order, and each one can also be used on its own.</p>
+    <div class="levels">
+      <article class="box level">
+        <span class="box-title">LEVEL 1</span>
+        <div class="lane car" aria-hidden="true"></div>
+        <h3>STABILIZE</h3>
+        <p>Filmed handheld from the back of the room? Levytsya tracks the camera shake and smooths it into a steady, gimbal-like shot.</p>
+        <ul><li>Adjustable smoothing</li><li>Slight zoom hides the edges</li><li>Works on iPhone portrait and landscape</li></ul>
+      </article>
+      <article class="box level">
+        <span class="box-title">LEVEL 2</span>
+        <div class="lane truck" aria-hidden="true"></div>
+        <h3>TRIM</h3>
+        <p>Cut the setup at the start, the chatter at the end, and any chunk in between: the projector failing, an off-mic question.</p>
+        <ul><li>Mark cuts while you watch</li><li>Times stay on the original video, so cuts never shift each other</li><li>Frame-accurate, no clicks at the joins</li></ul>
+      </article>
+      <article class="box level">
+        <span class="box-title">LEVEL 3</span>
+        <div class="lane log" aria-hidden="true"></div>
+        <h3>CLEAN AUDIO</h3>
+        <p>Made for a speaker recorded from the room: background noise, echo, a voice that fades when you walk away from the mic.</p>
+        <ul><li>Neural speech denoiser</li><li>Evens out the level, boosts a weak signal</li><li>Loudness ready for YouTube and podcasts</li><li>Before/after test in seconds</li></ul>
+      </article>
+      <article class="box level">
+        <span class="box-title">LEVEL 4</span>
+        <div class="lane pink" aria-hidden="true"></div>
+        <h3>WATERMARK</h3>
+        <p>Add your logo and a line of text. Choose the size, angle, opacity and position, then check it on a real frame before you encode.</p>
+        <ul><li>PNG logo with transparency</li><li>Any font, color and outline</li><li>Save your branding as a template, reuse it on every talk</li></ul>
+      </article>
+      <article class="box level">
+        <span class="box-title">LEVEL 5</span>
+        <div class="lane turtle" aria-hidden="true"></div>
+        <h3>SUBTITLES</h3>
+        <p>Get a full transcript and subtitles in your language, then translated into as many others as you like: French, Spanish, Ukrainian, Haitian Creole and 24 more.</p>
+        <ul><li>Whisper speech recognition, language auto-detected</li><li>Offline translation, sentence by sentence</li><li>.srt, .vtt and .txt files, plus switchable tracks inside the video</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="screens-title">
+    <h2 class="section-title" id="screens-title">SCREENSHOTS</h2>
+    <div class="screens">
+      <figure class="box">
+        <span class="box-title">THE CONTROL PANEL</span>
+        <img src="assets/screens/app-main.jpg" alt="Levytsya's main screen: the video player on the left, the stabilize, trim and clean audio levels on the right" loading="lazy" width="1536" height="784">
+        <figcaption>Scrub the video, mark your cuts, set each level.</figcaption>
+      </figure>
+      <figure class="box">
+        <span class="box-title">THE GAME</span>
+        <img src="assets/screens/app-game.jpg" alt="Progress screen: the lioness crosses one lane per level, with a progress bar below" loading="lazy" width="660" height="688">
+        <figcaption>She hops one lane per level. Home means your video is ready.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="download" aria-labelledby="download-title">
+    <h2 class="section-title" id="download-title">SELECT YOUR CONSOLE</h2>
+    <p class="section-lead">Free. Pick the version for your computer.</p>
+    <div class="dl-grid">
+      <div class="box dl-card">
+        <span class="box-title">MAC</span>
+        <h3>macOS</h3>
+        <a class="btn go dl-btn" href="downloads/levytsya-1.0.0-mac-arm64.dmg">APPLE SILICON (M1–M4)</a>
+        <a class="btn dl-btn" href="downloads/levytsya-1.0.0-mac-x64.dmg">INTEL MAC</a>
+        <p class="dl-req">macOS 11+ · Python 3.10+ · ffmpeg</p>
+        <p class="small-print">Not sure? Apple menu → About This Mac: "Apple M…" means Apple Silicon.</p>
+      </div>
+      <div class="box dl-card">
+        <span class="box-title">WINDOWS</span>
+        <h3>Windows</h3>
+        <a class="btn go dl-btn" href="downloads/levytsya-1.0.0-win-x64.exe">INSTALLER (.EXE)</a>
+        <a class="btn dl-btn" href="downloads/levytsya-1.0.0-win-portable.exe">PORTABLE (NO INSTALL)</a>
+        <p class="dl-req">Windows 10/11 64-bit · Python 3.10+ · ffmpeg</p>
+      </div>
+      <div class="box dl-card">
+        <span class="box-title">LINUX &amp; SCRIPTS</span>
+        <h3>Source</h3>
+        <a class="btn dl-btn" href="downloads/levytsya-1.0.0.zip" download>SCRIPTS + WEB APP (.ZIP)</a>
+        <p class="dl-req">Any system · Python 3.9+ · ffmpeg</p>
+        <p class="small-print">Unzip, then run <code>python3 run.py</code>. The app opens in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-title">
+    <h2 class="section-title" id="how-title">HOW TO PLAY</h2>
+    <p class="section-lead">Steps 1 to 3 happen once. After that, just open Levytsya.</p>
+    <ol class="steps">
+      <li class="box">
+        <span class="box-title">STEP 1</span>
+        <h3>INSTALL PYTHON</h3>
+        <p>Version 3.10 to 3.14 (3.12 recommended), free from <a href="https://www.python.org/downloads/">python.org</a>. On Windows, tick <b>"Add python.exe to PATH"</b> in the installer.</p>
+      </li>
+      <li class="box">
+        <span class="box-title">STEP 2</span>
+        <h3>INSTALL FFMPEG</h3>
+        <p>The video engine. Paste one line in a terminal:</p>
+        <pre><span class="dim">macOS</span>    brew install ffmpeg
+<span class="dim">Windows</span>  winget install ffmpeg
+<span class="dim">Linux</span>    sudo apt install ffmpeg</pre>
+        <p class="small-print">No Homebrew on your Mac? Get it at <a href="https://brew.sh">brew.sh</a> first.</p>
+      </li>
+      <li class="box">
+        <span class="box-title">STEP 3</span>
+        <h3>INSTALL &amp; OPEN</h3>
+        <p><b>Mac:</b> open the .dmg and drag Levytsya to Applications. <b>Windows:</b> run the installer, or just open the portable .exe.</p>
+        <p>The first time, the <b>ENGINE ROOM</b> checks Python and ffmpeg and installs Levytsya's components with one button (a few minutes). Everything stays in a private folder.</p>
+      </li>
+      <li class="box">
+        <span class="box-title">STEP 4</span>
+        <h3>PRESS START</h3>
+        <p>Choose a video, turn on your levels, press START. Your files never leave your computer.</p>
+        <p class="small-print">Want subtitles? Press <b>INSTALL ENGINE</b> in Level 5 once. It's about 500 MB, plus about 2 GB of speech and translation models on the first transcription.</p>
+      </li>
+    </ol>
+    <div class="box note">
+      <span class="box-title">FIRST LAUNCH</span>
+      <p><b>Mac:</b> Levytsya isn't notarized by Apple yet, so macOS blocks it once. Open it, click <b>Done</b>, then go to System Settings → Privacy &amp; Security and click <b>Open Anyway</b>. If macOS says the app is "damaged", run this in Terminal and try again:</p>
+      <pre>xattr -cr /Applications/Levytsya.app</pre>
+      <p><b>Windows:</b> on the SmartScreen warning, click <b>More info</b>, then <b>Run anyway</b>.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="power-title">
+    <div class="box power">
+      <span class="box-title" id="power-title">FOR POWER USERS</span>
+      <p>Every level is also a command-line script in the same folder, ready for batch jobs and automation:</p>
+      <pre>python stabilize.py   talk.mov stable.mp4 --radius 50
+python trim.py        stable.mp4 cut.mp4 --start 1:05 --cuts-file cuts.txt
+python clean_audio.py cut.mp4 clean.mp4 --strength 0.8
+python watermark.py   clean.mp4 final.mp4 --template brand.json
+python subtitles.py   final.mp4 final_subs.mp4 --languages fr,es,uk</pre>
+      <p>Watermark templates saved in the app live in <code>~/.levytsya/templates</code> and work with <code>--template</code>. The README in the folder documents every option.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <h2 class="section-title" id="faq-title">FAQ</h2>
+    <div class="faq">
+      <details class="box"><summary>IS IT REALLY PRIVATE?</summary>
+        <p>Yes. Levytsya runs entirely on your computer. Your videos are never uploaded anywhere. The browser window is just the control panel, talking to a small program on your own machine.</p></details>
+      <details class="box"><summary>WHICH FILES CAN I USE?</summary>
+        <p>MP4, MOV, MKV, M4V, AVI and WebM, including iPhone recordings (HEVC, portrait, spatial audio). The result is an H.264 MP4 that plays everywhere.</p></details>
+      <details class="box"><summary>WHICH SUBTITLE LANGUAGES?</summary>
+        <p>The talk can be in any language Whisper understands. Subtitles can be translated into 28 languages: English, French, Spanish, German, Italian, Portuguese, Dutch, Ukrainian, Russian, Polish, Czech, Romanian, Hungarian, Greek, Swedish, Turkish, Arabic, Hebrew, Persian, Hindi, Chinese, Japanese, Korean, Vietnamese, Indonesian, Thai, Haitian Creole and Swahili.</p>
+        <p>Translations are made by a machine on your computer. They're good for understanding a talk, but have a native speaker check them before an official release. The default translator (M2M-100) is free for any use. The NLLB-200 option translates better, but its license allows non-commercial use only.</p></details>
+      <details class="box"><summary>CAN IT REMOVE ALL THE ECHO?</summary>
+        <p>It makes echo much less noticeable, but a very reverberant hall will still sound like a hall. Noise, low level and uneven volume are what it fixes best. Use the 30-second test to hear the difference before processing the whole talk.</p></details>
+      <details class="box"><summary>HOW LONG DOES IT TAKE?</summary>
+        <p>On an Apple Silicon Mac, a 25-minute 720p talk takes roughly 15 minutes with stabilize, trim, audio and watermark on, and longer in 1080p or 4K. Stabilizing is the slowest level. Subtitles add a few minutes, more on Windows and Linux where Whisper runs on the processor. Turn off the levels you don't need to go faster.</p></details>
+      <details class="box"><summary>WHY DO TIMES NOT SHIFT WHEN I CUT?</summary>
+        <p>Every timestamp you enter is read on the original video. Levytsya works out which pieces to keep and joins them in one pass, so removing one chunk never moves the others. You never have to recalculate.</p></details>
+      <details class="box"><summary>WHAT DOES "ЛЕВИЦЯ" MEAN?</summary>
+        <p>It's Ukrainian for <i>lioness</i>, pronounced "le-VY-tsya". She's the one crossing the road.</p></details>
+    </div>
+  </section>
+
+  <section class="section final">
+    <canvas id="final-sprite" aria-hidden="true"></canvas>
+    <p class="press blink">READY, PLAYER ONE?</p>
+    <a class="btn start" href="#download">▶ DOWNLOAD LEVYTSYA</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>LEVYTSYA v1.0.0 · A DATAWISE ACADEMY GAME</p>
+  <p>Built on ffmpeg, OpenCV and RNNoise · Font: Press Start 2P (SIL Open Font License)</p>
+</footer>
+
+<script src="assets/sprites.js"></script>
+<script>
+  (function () {
+    var L = window.Levytsya;
+    L.mountLioness(document.getElementById("nav-sprite"), 2);
+    L.mountLioness(document.getElementById("hero-sprite"), 8);
+    L.mountLioness(document.getElementById("final-sprite"), 5);
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var start = function () {
+      L.LevBoard(document.getElementById("attract"), [
+        { style: "stabilize", label: "STABILIZE" }, { style: "trim", label: "TRIM" },
+        { style: "clean", label: "CLEAN AUDIO" }, { style: "watermark", label: "WATERMARK" },
+        { style: "subtitles", label: "SUBTITLES" }
+      ], { demo: !reduce, scale: 3 });
+    };
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load("8px 'Press Start 2P'").then(start, start);
+    } else start();
+  })();
+</script>
+</body>
+</html>
